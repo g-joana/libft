@@ -6,7 +6,7 @@
 /*   By: jgils <jgils@student.42.rio>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 15:18:03 by jgils             #+#    #+#             */
-/*   Updated: 2023/10/17 16:35:40 by jgils            ###   ########.fr       */
+/*   Updated: 2023/10/18 16:28:32 by jgils            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ void	bzero(void *s, size_t n);
 void	*memcpy(void *dest, const void *src, size_t n);
 void	*memmove(void *dest, const void *src, size_t n);
 
-size_t	strlcpy(char *dst, const char *src, size_t size);
+//size_t	strlcpy(char *dst, const char *src, size_t size);
 size_t	strlcat(char *dst, const char *src, size_t size);
 
 //int	toupper(int c);
