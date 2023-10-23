@@ -1,23 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   memchr.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jgils <jgils@student.42.rio>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/16 19:42:31 by jgils             #+#    #+#             */
-/*   Updated: 2023/10/23 18:07:22 by jgils            ###   ########.fr       */
+/*   Created: 2023/10/23 11:33:43 by jgils             #+#    #+#             */
+/*   Updated: 2023/10/23 13:12:15 by jgils            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-
-size_t	ft_strlen(const char *s)
+void  *memchr(const void *s, int c, size_t n)
 {
 	int	i;
+	unsigned char	*str;
 
 	i = 0;
-	while(*s++)
+	str = (unsigned char *) s;
+	while (s[i] && i < n)
+	{
+		if (str[i] == (unsigned char) c)
+		{
+			str = &str[i];
+			return ((void *) str);
+		}
 		i++;
-	return (i);
+	}
+	return (NULL);
 }

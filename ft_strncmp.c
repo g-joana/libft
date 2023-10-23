@@ -6,16 +6,17 @@
 /*   By: jgils <jgils@student.42.rio>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 20:58:46 by jgils             #+#    #+#             */
-/*   Updated: 2023/10/16 21:23:58 by jgils            ###   ########.fr       */
+/*   Updated: 2023/10/23 16:31:21 by jgils            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strncmp(char *s1, char *s2)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
-	while (s1[i] == s2[i])
+	n -= 1;
+	while (s1[i] == s2[i] && i < n)
 		i++;
-	return (s1[i] - s2[i]);
+	return ((unsigned char)s1[i] - (unsigned char)s2[i]);
 }

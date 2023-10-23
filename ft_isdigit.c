@@ -6,17 +6,11 @@
 /*   By: jgils <jgils@student.42.rio>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 20:49:34 by jgils             #+#    #+#             */
-/*   Updated: 2023/10/16 20:57:53 by jgils            ###   ########.fr       */
+/*   Updated: 2023/10/23 15:36:29 by jgils            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isdigit(char c)
+int	ft_isdigit(int c)
 {
-	return (c >= 32 && c <= 126);
-}
-
-int	main()
-{
-	#include <stdio.h>
-	printf("%i", ft_isdigit('\n'));
+	return (c >= 48 && c <= 57);
 }
