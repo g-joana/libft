@@ -6,23 +6,25 @@
 /*   By: jgils <jgils@student.42.rio>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 18:03:16 by jgils             #+#    #+#             */
-/*   Updated: 2023/10/18 20:23:06 by jgils            ###   ########.fr       */
+/*   Updated: 2023/10/25 15:33:44 by jgils            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*memcpy(void *dest, const void *src, size_t n)
+#include "libft"
+
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	int	i;
+	size_t	i;
+	char	*newdest;
+	char	*newsrc;
 
 	i = 0;
-	while (src[i] && i < n)
+	newdest = (char *) dest;
+	newsrc = (char *) src;
+	while (i < n)
 	{
-		dest[i] = src[i];
+		newdest[i] = newsrc[i];
 		i++;
 	}
-	dest[i] = '\0';
-}
-
-int	main(void)
-{
+	return (dest);
 }

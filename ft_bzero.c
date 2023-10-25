@@ -6,24 +6,20 @@
 /*   By: jgils <jgils@student.42.rio>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 17:29:48 by jgils             #+#    #+#             */
-/*   Updated: 2023/10/18 17:49:08 by jgils            ###   ########.fr       */
+/*   Updated: 2023/10/25 14:54:13 by jgils            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	bzero(void *s, size_t n)
+void	ft_bzero(void *s, size_t n)
 {
-	char	*ptr;
+	char	*dest;
 	size_t	i;
-	
-	ptr = (char *)s;
+
+	dest = (char *) s;
 	i = 0;
-	while (ptr[i] && i < n)
+	while (dest[i] && i < n)
 	{
-		ptr[i] = '\0';
+		dest[i] = '\0';
 		i++;
 	}
-}
-
-int	main(void)
-{
 }

@@ -6,11 +6,11 @@
 /*   By: jgils <jgils@student.42.rio>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 19:42:31 by jgils             #+#    #+#             */
-/*   Updated: 2023/10/23 18:07:22 by jgils            ###   ########.fr       */
+/*   Updated: 2023/10/25 14:37:32 by jgils            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
+#include "libft.h"
 
 size_t	ft_strlen(const char *s)
 {
