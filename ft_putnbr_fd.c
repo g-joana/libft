@@ -1,28 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jgils <jgils@student.42.rio>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/18 20:16:43 by jgils             #+#    #+#             */
-/*   Updated: 2023/10/26 19:13:52 by jgils            ###   ########.fr       */
+/*   Created: 2023/10/26 20:52:08 by jgils             #+#    #+#             */
+/*   Updated: 2023/10/26 21:28:01 by jgils            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*memmove(void *dest, const void *src, size_t n)
+void ft_putnbr_fd(int n, int fd)
 {
-	int	i;
-	char	*keepsrc;
+	long int	nb;
 
-	i = 0;
-	keepsrc = (char	*)src;
-	while (i < n)
+	nb = n;
+	if (nb < 0)
 	{
-		dest[i] = keepsrc[i];
-		i++;
+		ft_putchar_fd('-', fd);
+		nb *= -1;
 	}
-	return (dest);
+	if (nb > 9)
+	{
+		ft_putnbr_fd(nb / 10, fd);
+		ft_putnbr_fd(nb % 10, fd);
+	}
+	else
+	{
+		nb += '0';
+		ft_putchar_fd(nb, fd);
+	}
 }

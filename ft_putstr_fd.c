@@ -1,28 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jgils <jgils@student.42.rio>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/18 20:16:43 by jgils             #+#    #+#             */
-/*   Updated: 2023/10/26 19:13:52 by jgils            ###   ########.fr       */
+/*   Created: 2023/10/26 20:15:31 by jgils             #+#    #+#             */
+/*   Updated: 2023/10/26 20:32:51 by jgils            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*memmove(void *dest, const void *src, size_t n)
+void	ft_putstr_fd(char *s, int fd)
 {
 	int	i;
-	char	*keepsrc;
 
 	i = 0;
-	keepsrc = (char	*)src;
-	while (i < n)
-	{
-		dest[i] = keepsrc[i];
-		i++;
-	}
-	return (dest);
+	while (s[i])
+		write(fd, &s[i++], 1);
 }

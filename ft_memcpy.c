@@ -6,11 +6,11 @@
 /*   By: jgils <jgils@student.42.rio>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 18:03:16 by jgils             #+#    #+#             */
-/*   Updated: 2023/10/25 15:33:44 by jgils            ###   ########.fr       */
+/*   Updated: 2023/10/26 19:12:36 by jgils            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft"
+#include "libft.h"
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {

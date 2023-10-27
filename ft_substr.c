@@ -1,28 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_substr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jgils <jgils@student.42.rio>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/18 20:16:43 by jgils             #+#    #+#             */
-/*   Updated: 2023/10/26 19:13:52 by jgils            ###   ########.fr       */
+/*   Created: 2023/10/26 15:14:39 by jgils             #+#    #+#             */
+/*   Updated: 2023/10/26 15:30:57 by jgils            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdlib.h>
+#include <stdio.h>
 
-void	*memmove(void *dest, const void *src, size_t n)
+char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	int	i;
-	char	*keepsrc;
+	size_t	i;
+	char	*substr;
 
 	i = 0;
-	keepsrc = (char	*)src;
-	while (i < n)
+	substr = malloc ((len + 1) * sizeof(char));
+	if (!substr)
+		return (NULL);
+	while (len--)
 	{
-		dest[i] = keepsrc[i];
+		substr[i] = s[start];
 		i++;
+		start++;
 	}
-	return (dest);
+	substr[i] = '\0';
+	return (substr);
+}
+
+int	main(void)
+{
+	printf("%s", ft_substr("ache aqui", 5, 4));
+	return (0);
 }

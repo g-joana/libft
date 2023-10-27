@@ -1,28 +1,51 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jgils <jgils@student.42.rio>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/18 20:16:43 by jgils             #+#    #+#             */
-/*   Updated: 2023/10/26 19:13:52 by jgils            ###   ########.fr       */
+/*   Created: 2023/10/26 18:47:57 by jgils             #+#    #+#             */
+/*   Updated: 2023/10/26 19:29:02 by jgils            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdio.h>
+#include <stdlib.h>
 
-void	*memmove(void *dest, const void *src, size_t n)
+size_t	ft_strlen(const char *s)
 {
 	int	i;
-	char	*keepsrc;
 
 	i = 0;
-	keepsrc = (char	*)src;
-	while (i < n)
+	while(*s++)
+		i++;
+	return (i);
+}
+
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+{
+	unsigned int	i;
+	unsigned int	len;
+	char	*dest;
+
+	i = 0;
+	len = ft_strlen(s);
+	dest = (char *) malloc (len + 1 * sizeof(char));
+	if (!dest)
+		return (NULL);
+	while (len--)
 	{
-		dest[i] = keepsrc[i];
+		dest[i] = f(i, s[i]);
 		i++;
 	}
+	dest[i] = '\0';
 	return (dest);
+}
+
+int	main(void)
+{
+	printf("%s\n", ft_strmapi("alou carai", ft_toupper()));
+	
 }

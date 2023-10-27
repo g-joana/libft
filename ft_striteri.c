@@ -1,28 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jgils <jgils@student.42.rio>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/18 20:16:43 by jgils             #+#    #+#             */
-/*   Updated: 2023/10/26 19:13:52 by jgils            ###   ########.fr       */
+/*   Created: 2023/10/26 19:29:42 by jgils             #+#    #+#             */
+/*   Updated: 2023/10/26 19:53:10 by jgils            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include <stdio.h>
 
-void	*memmove(void *dest, const void *src, size_t n)
+void	ft_toupper(unsigned int i, char *s )
+{
+	if (s[i] >= 'a' && s[i] <= 'z')
+		s[i] -= 32;
+}
+
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	int	i;
-	char	*keepsrc;
 
 	i = 0;
-	keepsrc = (char	*)src;
-	while (i < n)
+	while (s[i])
 	{
-		dest[i] = keepsrc[i];
+		f(i, s);
 		i++;
 	}
-	return (dest);
+}
+
+int	main(void)
+{
+	char	s[20] = "alooooooooooo";
+	ft_striteri(s, &ft_toupper);
+	printf("%s\n", s);
 }
