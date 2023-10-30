@@ -6,11 +6,13 @@
 /*   By: jgils <jgils@student.42.rio>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 17:16:56 by jgils             #+#    #+#             */
-/*   Updated: 2023/10/18 17:21:39 by jgils            ###   ########.fr       */
+/*   Updated: 2023/10/30 19:31:20 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*strrchr(const char *s, int c)
+#include "libft.h"
+
+char	*ft_strrchr(const char *s, int c)
 {	
 	char	*ptr;
 	char	*keepptr;
@@ -25,8 +27,4 @@ char	*strrchr(const char *s, int c)
 	if (*ptr++ == '\0')
 		keepptr = NULL;
 	return (keepptr);
-}
-
-int	main(void)
-{
 }

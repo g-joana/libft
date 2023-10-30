@@ -6,7 +6,7 @@
 /*   By: jgils <jgils@student.42.rio>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 15:18:03 by jgils             #+#    #+#             */
-/*   Updated: 2023/10/26 20:26:39 by jgils            ###   ########.fr       */
+/*   Updated: 2023/10/30 20:31:40 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ int	ft_tolower(int c);
 
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
+char	*ft_substr(char const *s, unsigned int start, size_t len);
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n);
 
@@ -47,6 +48,16 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n);
 
 char    *ft_strnstr(const char *big, const char *little, size_t len);
 
+char	*ft_strjoin(int size, char **strs, char *sep);
 int	ft_atoi(const char *nptr);
+char	*ft_itoa(int n);
+void	ft_putchar_fd(char c, int fd);
+void	ft_putendl_fd(char *s, int fd);
+void 	ft_putnbr_fd(int n, int fd);
+void	ft_putstr_fd(char *s, int fd);
+char	**ft_split(char const *s, char c);
+void	ft_striteri(char *s, void (*f)(unsigned int, char*));
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+char	*ft_strtrim(char const *s1, char const *set);
 
 #endif

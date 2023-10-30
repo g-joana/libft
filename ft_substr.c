@@ -6,7 +6,7 @@
 /*   By: jgils <jgils@student.42.rio>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 15:14:39 by jgils             #+#    #+#             */
-/*   Updated: 2023/10/26 15:30:57 by jgils            ###   ########.fr       */
+/*   Updated: 2023/10/30 19:34:22 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	substr[i] = '\0';
 	return (substr);
 }
-
+/*
 int	main(void)
 {
 	printf("%s", ft_substr("ache aqui", 5, 4));
 	return (0);
 }
+*/

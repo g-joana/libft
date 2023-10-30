@@ -6,9 +6,11 @@
 /*   By: jgils <jgils@student.42.rio>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 19:53:48 by jgils             #+#    #+#             */
-/*   Updated: 2023/10/26 20:14:59 by jgils            ###   ########.fr       */
+/*   Updated: 2023/10/30 20:04:50 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_putchar_fd(char c, int fd)
 {

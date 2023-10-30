@@ -6,7 +6,7 @@
 /*   By: jgils <jgils@student.42.rio>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 19:54:12 by jgils             #+#    #+#             */
-/*   Updated: 2023/10/16 20:26:09 by jgils            ###   ########.fr       */
+/*   Updated: 2023/10/30 20:18:58 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,8 @@ int	ft_atoi(char *ascii)
 	return (nb);
 }
 
-int	main()
-{
-#include <stdio.h>
-	printf("%i", ft_atoi("  -262"));
-}
+// int	main()
+// {
+// #include <stdio.h>
+// 	printf("%i", ft_atoi("  -262"));
+// }

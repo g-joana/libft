@@ -6,7 +6,7 @@
 /*   By: jgils <jgils@student.42.rio>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 21:30:07 by jgils             #+#    #+#             */
-/*   Updated: 2023/10/17 14:10:38 by jgils            ###   ########.fr       */
+/*   Updated: 2023/10/30 19:35:06 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,10 +43,11 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		ptr = NULL;
 	return (ptr);
 }
-
+/*
 int	main(void)
 {
 	#include <stdio.h>
 	printf("%s", ft_strnstr("acha aqui po", "", 8));
 	return (0);
 }
+*/

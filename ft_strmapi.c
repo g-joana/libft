@@ -6,23 +6,13 @@
 /*   By: jgils <jgils@student.42.rio>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 18:47:57 by jgils             #+#    #+#             */
-/*   Updated: 2023/10/26 19:29:02 by jgils            ###   ########.fr       */
+/*   Updated: 2023/10/30 20:20:06 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include <stdio.h>
 #include <stdlib.h>
-
-size_t	ft_strlen(const char *s)
-{
-	int	i;
-
-	i = 0;
-	while(*s++)
-		i++;
-	return (i);
-}
 
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
@@ -43,9 +33,10 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	dest[i] = '\0';
 	return (dest);
 }
-
+/*
 int	main(void)
 {
 	printf("%s\n", ft_strmapi("alou carai", ft_toupper()));
 	
 }
+*/

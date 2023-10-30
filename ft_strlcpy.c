@@ -6,11 +6,14 @@
 /*   By: jgils <jgils@student.42.rio>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 12:13:05 by jgils             #+#    #+#             */
-/*   Updated: 2023/10/18 14:48:04 by jgils            ###   ########.fr       */
+/*   Updated: 2023/10/30 20:23:16 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-size_t	strlcpy(char *dst, const char *src, size_t size)
+#include <stdlib.h>
+#include "libft.h"
+
+size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	//dst copies src until size + '\0'
 	//strlcpy counts and returns the length of the entire source string
@@ -32,7 +35,7 @@ size_t	strlcpy(char *dst, const char *src, size_t size)
 	dst[i] = '\0';
 	return (srclen);
 }
-
+/*
 int	main(void)
 {
 	#include <stdio.h>
@@ -46,4 +49,5 @@ int	main(void)
 	size = 
 
 	printf("return len: %i\n dst: %s", strlcpy(dst, src, size));
-}	
+}
+*/

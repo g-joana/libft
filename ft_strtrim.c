@@ -6,38 +6,12 @@
 /*   By: jgils <jgils@student.42.rio>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 15:34:08 by jgils             #+#    #+#             */
-/*   Updated: 2023/10/26 18:45:06 by jgils            ###   ########.fr       */
+/*   Updated: 2023/10/30 19:35:43 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/*
-#include <stdio.h>
-#include <stdlib.h>
 
-char    *ft_strchr(const char *s, int c)
-{
-        char    *ptr;
-        ptr = (char *)s;
-        while (*ptr++)
-        {
-                if (*ptr == c)
-                        return (ptr);
-        }
-        ptr = NULL;
-        return (ptr);
-}
-
-size_t	ft_strlen(const char *s)
-{
-	int	i;
-
-	i = 0;
-	while(*s++)
-		i++;
-	return (i);
-}
-*/
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	int	start;
@@ -64,6 +38,7 @@ char	*ft_strtrim(char const *s1, char const *set)
 	trimmed[i] = '\0';
 	return (trimmed);
 }
+
 /*
 int	main(void)
 {

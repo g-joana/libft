@@ -6,9 +6,11 @@
 /*   By: jgils <jgils@student.42.rio>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 20:58:46 by jgils             #+#    #+#             */
-/*   Updated: 2023/10/23 16:31:21 by jgils            ###   ########.fr       */
+/*   Updated: 2023/10/30 18:50:06 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {

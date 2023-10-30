@@ -6,11 +6,13 @@
 /*   By: jgils <jgils@student.42.rio>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 14:48:22 by jgils             #+#    #+#             */
-/*   Updated: 2023/10/18 16:30:29 by jgils            ###   ########.fr       */
+/*   Updated: 2023/10/30 19:32:39 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-size_t	strlcat(char *dst, const char *src, size_t size)
+#include "libft.h"
+
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	//size - strlen(dst) - 1
 	
@@ -30,11 +32,11 @@ size_t	strlcat(char *dst, const char *src, size_t size)
 		++idst;
 		isrc++;
 	}
-	idest++;
+	idst++;
 	dst[idst] = '\0';
 	return (ft_strlen(src) + size);
 }
-
+/*
 int	main(void)
 {
 	#include <stdio.h>
@@ -49,3 +51,4 @@ int	main(void)
 
 	printf("return len: %i\n dst: %s", strlcpy(dst, src, size));
 }
+*/
