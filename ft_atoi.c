@@ -6,45 +6,30 @@
 /*   By: jgils <jgils@student.42.rio>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 19:54:12 by jgils             #+#    #+#             */
-/*   Updated: 2023/10/30 20:18:58 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/11/01 16:57:57 by jgils            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_atoi(char *ascii)
 {
 	int	i;
-	int	sigm;
-	int	sigp;
+	int	sig;
+	int	count;
 	int	nb;
 
 	i = 0;
-	sigm = 0;
-	sigp = 0;
+	sig = 1;
+	count = 1;
 	nb = 0;
 	while ((ascii[i] >= 8 && ascii[i] <= 13) || (ascii[i] == ' '))
 		i++;
-	while (ascii[i] == '-' || ascii[i] == '+')
+	while ((ascii[i] == '-' || ascii[i] == '+') && count--)
 	{
 		if (ascii[i] == '-')
-			sigm++;
-		else if (ascii[i] == '+')
-			sigp++;
+			sig = -1;
 		i++;
 	}
-	while ((ascii[i] >= '0') && (ascii[i] <= '9'))
-	{
-		nb = nb * 10 + (ascii[i] - '0');
-		i++;
-	}
-	if (sigm + sigp > 1)
-		return (0);
-	else if (sigm)
-		nb *= -1;
-	return (nb);
+	while (ascii[i] >= '0' && ascii[i] <= '9')
+		nb = nb * 10 + (ascii[i++] - '0');
+	return (nb * sig);
 }
-
-// int	main()
-// {
-// #include <stdio.h>
-// 	printf("%i", ft_atoi("  -262"));
-// }

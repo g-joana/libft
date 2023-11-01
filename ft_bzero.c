@@ -6,7 +6,7 @@
 /*   By: jgils <jgils@student.42.rio>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 17:29:48 by jgils             #+#    #+#             */
-/*   Updated: 2023/10/26 19:12:10 by jgils            ###   ########.fr       */
+/*   Updated: 2023/11/01 14:02:12 by jgils            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,14 +14,12 @@
 
 void	ft_bzero(void *s, size_t n)
 {
-	char	*dest;
 	size_t	i;
 
-	dest = (char *) s;
 	i = 0;
-	while (dest[i] && i < n)
+	while (i < n)
 	{
-		dest[i] = '\0';
+		((char *) s)[i] = 0;
 		i++;
 	}
 }

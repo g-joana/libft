@@ -6,7 +6,7 @@
 /*   By: jgils <jgils@student.42.rio>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 15:18:03 by jgils             #+#    #+#             */
-/*   Updated: 2023/10/30 20:31:40 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/11/01 13:23:24 by jgils            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n);
 
 char    *ft_strnstr(const char *big, const char *little, size_t len);
 
-char	*ft_strjoin(int size, char **strs, char *sep);
+char	*ft_strjoin(char const *s1, char const *s2);
 int	ft_atoi(const char *nptr);
 char	*ft_itoa(int n);
 void	ft_putchar_fd(char c, int fd);
@@ -59,5 +59,9 @@ char	**ft_split(char const *s, char c);
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_strtrim(char const *s1, char const *set);
+
+void	*ft_calloc(size_t nmemb, size_t size);
+char	*ft_strdup(const char *s);
+
 
 #endif

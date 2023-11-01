@@ -6,7 +6,7 @@
 /*   By: jgils <jgils@student.42.rio>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 18:47:57 by jgils             #+#    #+#             */
-/*   Updated: 2023/10/30 20:20:06 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/11/01 17:52:16 by jgils            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	unsigned int	i;
 	unsigned int	len;
-	char	*dest;
+	char			*dest;
 
 	i = 0;
 	len = ft_strlen(s);
