@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: jgils <jgils@student.42.rio>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/10/18 14:48:22 by jgils             #+#    #+#             */
-/*   Updated: 2023/10/30 19:32:39 by pdrago           ###   ########.fr       */
+/*   Created: 2023/11/02 22:37:16 by jgils             #+#    #+#             */
+/*   Updated: 2023/11/03 11:27:50 by jgils            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,41 +14,41 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	//size - strlen(dst) - 1
-	
-	size_t	idst;
-	size_t	isrc;
+	unsigned int	id;
+	unsigned int	is;
+	char	*src_cpy;
+	char	*dst_cpy;
 
-	idst = 0;
-	isrc = 0;
-	if (!*dst)
-		return (0);
-	idst = ft_strlen(dst);
-	if ((size - 1) <= idst)
-		return (size + ft_strlen(src));
-	while (src[isrc] != '\0' && (idst + isrc) <(size - 1))
+	src_cpy = (char *) src;
+	dst_cpy = dst;
+	id = ft_strlen(dst);
+	if (id >= size)
+		return (ft_strlen(dst_cpy) + ft_strlen(src_cpy));
+	id++;
+	is = 0;
+	while (src[is] && id + 1 < (unsigned int) size)
 	{
-		dst[idst] = src[isrc];
-		++idst;
-		isrc++;
+		dst[id] = src[is];
+		id++;
+		is++;
 	}
-	idst++;
-	dst[idst] = '\0';
-	return (ft_strlen(src) + size);
+	if (!(ft_strlen(dst_cpy) >= size))
+		dst[id + 1] = '\0';
+	return (ft_strlen(dst_cpy) + ft_strlen(src_cpy));
 }
 /*
 int	main(void)
 {
 	#include <stdio.h>
 
-	char	*dst;
-	const char	*src;
 	size_t	size;
+	char	dst[8] = "concat ";
+	const char	src[20] = "até aqui-menos esse";
 
-	dst[] = 
-	src[] = 
-	size = 
+	//dst = "concat ";
+	//src = "até aqui-menos esse";
+	size = 15;
 
-	printf("return len: %i\n dst: %s", strlcpy(dst, src, size));
+	printf("retorno: %li -> size deveria ser desse tamanho para concatenar tudo\n\ndst: %s", ft_strlcat(dst, src, size), dst);
 }
 */

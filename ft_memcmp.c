@@ -6,7 +6,7 @@
 /*   By: jgils <jgils@student.42.rio>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/18 20:24:20 by jgils             #+#    #+#             */
-/*   Updated: 2023/10/30 20:03:14 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/11/02 15:05:58 by jgils            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,17 @@
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
 	size_t	i;
-	const char	*cpy1;
-	const char	*cpy2;
-
+	char	*cpy1;
+	char	*cpy2;
+	
 	i = 0;
-	cpy1 = (const char *) s1;
-	cpy2 = (const char *) s2;
-	while ((cpy1[i] == cpy2[i]) && (i <= n))
+	cpy1 = (char *) s1;
+	cpy2 = (char *) s2;
+	while (i < n)
+	{
+		if (cpy1[i] != cpy2[i])
+			return ((unsigned char)cpy1[i] - (unsigned char)cpy2[i]);
 		i++;
-	return (cpy1[i] - cpy2[i]);
+	}
+	return (0);//unsigned - chega no 0 e buga
 }

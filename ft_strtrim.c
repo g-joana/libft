@@ -6,7 +6,7 @@
 /*   By: jgils <jgils@student.42.rio>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 15:34:08 by jgils             #+#    #+#             */
-/*   Updated: 2023/10/30 19:35:43 by pdrago           ###   ########.fr       */
+/*   Updated: 2023/11/02 16:38:22 by jgils            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,34 +14,35 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int	start;
-	int	end;
+	int	istart;
+	int	iend;
 	int	i;
 	char		*trimmed;
 
 	i = 0;
-	start = 0;
-	end = ft_strlen(s1);
-	while (s1[start] && ft_strchr(set, s1[start]))
-		start++;
-	while (end >= 0 && ft_strchr(set, s1[end]))
-		end--;
-	trimmed = malloc ((end - start) + 1 * sizeof(char));
+	istart = 0;
+	iend = ft_strlen(s1) - 1;
+	while (s1[istart] && ft_strchr(set, s1[istart]))
+		istart++;
+	while (iend > istart && ft_strchr(set, s1[iend]))
+		iend--;
+	trimmed = (char *) malloc((iend - istart + 1) * sizeof(char));
 	if (!trimmed)
 		return (NULL);
-	while (start <= end)
+	while (istart <= iend)
 	{
-		trimmed[i] = s1[start];
+		trimmed[i] = s1[istart];
 		i++;
-		start++;
+		istart++;
 	}
 	trimmed[i] = '\0';
 	return (trimmed);
 }
-
 /*
 int	main(void)
 {
-	printf("%s\n", ft_strtrim("alou321", "4312"));
+	#include <stdio.h> 
+	printf("%s\n", ft_strtrim("888f8fs888", "DJFJHSF888"));
+	return (0);
 }
 */
