@@ -6,7 +6,7 @@
 /*   By: jgils <jgils@student.42.rio>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/16 21:30:07 by jgils             #+#    #+#             */
-/*   Updated: 2023/11/02 18:01:00 by jgils            ###   ########.fr       */
+/*   Updated: 2023/11/07 17:44:57 by pdrago           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,27 +16,26 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
 	size_t	ibig;
 	size_t	ilit;
-	char	*ptr;
+	char	*str;
 
+	str = (char *) big;
+	if (!(ft_strlen(little)) || big == little)
+		return ((char *) big);
 	ibig = 0;
 	ilit = 0;
-	ptr = (char *) big;
-	while (big[ibig] && ibig < len)
+	while (big[ibig] && (ibig < len))
 	{
-		if (big[ibig] == little[ilit])
-			ptr = &ptr[ibig];
-		while (big[ibig] == little[ilit] && ibig < len)
+		if (big[ibig] == little[0])
 		{
-			ibig++;
-			ilit++;
+			str = &str[ibig];
+			ilit = 0;
+			while (big[ibig + ilit]
+				&& (big[ibig + ilit] == little[ilit]) && (ibig + ilit < len))
+				ilit++;
+			if (little[ilit++] == '\0')
+				return (str);
 		}
-		if (little[ilit] == '\0')
-			break;
-		ibig -= ilit;
-		ilit = 0;
 		ibig++;
 	}
-	if ((little[ilit] != '\0') && (little[0] != '\0'))
-		ptr = NULL;
-	return (ptr);
+	return (NULL);
 }

@@ -17,7 +17,7 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	size_t	i;
 	char	*cpy1;
 	char	*cpy2;
-	
+
 	i = 0;
 	cpy1 = (char *) s1;
 	cpy2 = (char *) s2;
@@ -27,5 +27,5 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 			return ((unsigned char)cpy1[i] - (unsigned char)cpy2[i]);
 		i++;
 	}
-	return (0);//unsigned - chega no 0 e buga
+	return (0);
 }
