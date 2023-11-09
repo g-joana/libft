@@ -6,7 +6,7 @@
 /*   By: jgils <jgils@student.42.rio>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/26 15:34:08 by jgils             #+#    #+#             */
-/*   Updated: 2023/11/02 16:38:22 by jgils            ###   ########.fr       */
+/*   Updated: 2023/11/09 15:05:56 by jgils            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,10 @@
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	int	istart;
-	int	iend;
-	int	i;
-	char		*trimmed;
+	char	*trimmed;
+	int		istart;
+	int		iend;
+	int		i;
 
 	i = 0;
 	istart = 0;
@@ -38,11 +38,3 @@ char	*ft_strtrim(char const *s1, char const *set)
 	trimmed[i] = '\0';
 	return (trimmed);
 }
-/*
-int	main(void)
-{
-	#include <stdio.h> 
-	printf("%s\n", ft_strtrim("888f8fs888", "DJFJHSF888"));
-	return (0);
-}
-*/

@@ -1,3 +1,14 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: jgils <jgils@student.42.rio>               +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/11/09 14:38:24 by jgils             #+#    #+#             */
+/*   Updated: 2023/11/09 14:51:29 by jgils            ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libft.h"
 
@@ -6,14 +17,13 @@ static int	get_ilen(int n)
 	int	len;
 
 	len = 0;
-
 	if (n == 0)
 		return (1);
 	if (n < 0)
 		len++;
 	while (n != 0)
 	{
-		n = n /10;
+		n = n / 10;
 		len ++;
 	}
 	return (len);
@@ -21,10 +31,10 @@ static int	get_ilen(int n)
 
 char	*ft_itoa(int n)
 {
-	long	nb;
-	char	*str;
-	int	len;
-	
+	int			len;
+	long		nb;
+	char		*str;
+
 	nb = n;
 	len = get_ilen(n);
 	str = (char *) malloc((len + 1) * sizeof(char));
@@ -42,7 +52,7 @@ char	*ft_itoa(int n)
 	{
 		len--;
 		str[len] = ((nb % 10) + '0');
-		nb = nb /10;
+		nb = nb / 10;
 	}
 	return (str);
 }

@@ -6,7 +6,7 @@
 #    By: jgils <jgils@student.42.rio>               +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/10/23 13:12:54 by jgils             #+#    #+#              #
-#    Updated: 2023/11/02 13:37:56 by jgils            ###   ########.fr        #
+#    Updated: 2023/11/09 16:57:21 by jgils            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,15 +17,11 @@ FILES_O = $(FILES_C:.c=.o)
 
 all: $(NAME)
 
-%.o: %.c
-	cc $(FLAGS) $<
+.c.o:
+	cc $(FLAGS) $< -o $@
 
 $(NAME): $(FILES_O)
 	ar -rc libft.a $(FILES_O)
-
-so:
-	cc -nostartfiles -fPIC $(FLAGS) $(FILES_C)
-	gcc -nostartfiles -shared -o libft.so $(FILES_O)
 
 exec: $(FILES_C)
 	cc -Wall -Wextra -Werror -o -c exec $(FILES_C)
