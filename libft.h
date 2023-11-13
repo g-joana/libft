@@ -6,7 +6,7 @@
 /*   By: jgils <jgils@student.42.rio>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/17 15:18:03 by jgils             #+#    #+#             */
-/*   Updated: 2023/11/09 17:09:39 by jgils            ###   ########.fr       */
+/*   Updated: 2023/11/13 12:52:00 by jgils            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,14 +57,14 @@ typedef struct s_list
 	struct s_list	*next;
 }	t_list;
 
-int		ft_lstsize(t_list *lst);
-t_list	*ft_lstnew(void *content);
-t_list	*ft_lstlast(t_list *lst);
-t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
-void	ft_lstadd_front(t_list **lst, t_list *new);
-void	ft_lstadd_back(t_list **lst, t_list *new);
-void	ft_lstdelone(t_list *lst, void (*del)(void*));
-void	ft_lstclear(t_list **lst, void (*del)(void*));
-void	ft_lstiter(t_list *lst, void (*f)(void *));
+int		ft_lstsize_bonus(t_list *lst);
+t_list	*ft_lstnew_bonus(void *content);
+t_list	*ft_lstlast_bonus(t_list *lst);
+t_list	*ft_lstmap_bonus(t_list *lst, void *(*f)(void *), void (*del)(void *));
+void	ft_lstadd_front_bonus(t_list **lst, t_list *new);
+void	ft_lstadd_back_bonus(t_list **lst, t_list *new);
+void	ft_lstdelone_bonus(t_list *lst, void (*del)(void*));
+void	ft_lstclear_bonus(t_list **lst, void (*del)(void*));
+void	ft_lstiter_bonus(t_list *lst, void (*f)(void *));
 
 #endif

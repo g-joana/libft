@@ -1,27 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
+/*   ft_lstmap_bonus.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jgils <jgils@student.42.rio>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/09 19:04:47 by jgils             #+#    #+#             */
-/*   Updated: 2023/11/13 08:23:50 by jgils            ###   ########.fr       */
+/*   Created: 2023/11/13 12:07:00 by jgils             #+#    #+#             */
+/*   Updated: 2023/11/13 12:52:30 by jgils            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstclear(t_list **lst, void (*del)(void*))
+t_list	*ft_lstmap_bonus(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	t_list	*nxtnode;
-	
-	while (*lst)
+	t_list	*newlst;
+
+	while (lst)
 	{
-		nxtnode = (*lst)->next;
-		del((*lst)->content);
-		free(*lst);
-		*lst = nxtnode;
+		newlst->next = ft_lstnew_bonus(newlst);
+		if (!newlst->next)
+			ft_lstclear_bonus(&newlst, del);
+		newlst->next = f(lst->content);
+		lst = lst->next;
 	}
-	*lst = NULL;
+	newlst = NULL;
+	return (newlst);
 }
