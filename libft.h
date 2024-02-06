@@ -15,7 +15,17 @@
 
 # include <stdlib.h>
 # include <unistd.h>
+#include <stdarg.h>
 
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 42
+# endif
+
+# ifndef MAX_FD
+#  define MAX_FD 1024
+# endif
+
+int		ft_printf(const char *str, ...);
 int		ft_isalpha(int c);
 int		ft_isdigit(int c);
 int		ft_isalnum(int c);
@@ -29,6 +39,7 @@ int		ft_atoi(const char *nptr);
 size_t	ft_strlen(const char *s);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
+char	*get_next_line(int fd);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
