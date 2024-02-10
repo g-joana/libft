@@ -1,27 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear_bonus.c                                :+:      :+:    :+:   */
+/*   ft_strstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jgils <jgils@student.42.rio>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/11/09 19:04:47 by jgils             #+#    #+#             */
-/*   Updated: 2023/11/13 08:23:50 by jgils            ###   ########.fr       */
+/*   Created: 2023/10/16 21:30:07 by jgils             #+#    #+#             */
+/*   Updated: 2024/02/10 03:07:45 by jgils            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstclear(t_list **lst, void (*del)(void*))
+char	*ft_strstr(const char *big, const char *little)
 {
-	t_list	*nxtnode;
+	size_t	ibig;
+	size_t	ilit;
 
-	while (*lst)
+	if (!(ft_strlen(little)) || big == little)
+		return ((char *) big);
+	ibig = 0;
+	ilit = 0;
+	while (big && big[ibig])
 	{
-		nxtnode = (*lst)->next;
-		del((*lst)->content);
-		free(*lst);
-		*lst = nxtnode;
+		if (big[ibig] == little[0])
+		{
+			str = &str[ibig];
+			ilit = 0;
+			while (big[ibig + ilit]
+				&& (big[ibig + ilit] == little[ilit]))
+				ilit++;
+			if (little[ilit++] == '\0')
+				return (&big[ibig]);
+		}
+		ibig++;
 	}
-	*lst = NULL;
+	return (NULL);
 }
