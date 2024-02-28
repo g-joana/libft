@@ -1,5 +1,5 @@
 # libft
-Biblioteca em C que será usada e aprimorada durante o ciclo básico da 42
+Biblioteca em C que será usada e aprimorada durante o curso da 42
 
 [Read this in english](README-EN.md)
 
