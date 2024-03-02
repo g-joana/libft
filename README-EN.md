@@ -1,7 +1,7 @@
 # libft
 C library that is going to be used and updated during 42 cursus
 
-[🇧🇷 Leia em português](README-EN.md)
+[🇧🇷 Leia em português](README.md)
 
 libc functions | additional functions | bonus | personal functions
 :----------- | :-----------: | :-----------: | -----------:
