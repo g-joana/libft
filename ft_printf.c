@@ -38,10 +38,10 @@ static int	ft_putptr(unsigned long arg, int base, char *set)
 
 static int	ft_putnbr(long arg, int base, char *set, int u)
 {
-	int			i;
-	int			sig;
-	char		str[16];
+	int				i;
+	int				sig;
 	unsigned int	nb;
+	char			str[16];
 
 	i = -1;
 	sig = 0;

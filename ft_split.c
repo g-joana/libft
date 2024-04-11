@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jgils <jou.42.rio@gmail.com>               +#+  +:+       +#+        */
+/*   By: jgils <jgils@student.42.rio>               +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/10/28 15:56:32 by jgils             #+#    #+#             */
 /*   Updated: 2023/11/09 15:51:26 by jgils            ###   ########.fr       */
